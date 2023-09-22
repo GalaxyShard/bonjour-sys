@@ -1,0 +1,9 @@
+[package]
+name = "bonjour-sys"
+version = "0.1.0"
+edition = "2021"
+descripton = "Raw system bindings to Bonjour (Apple & Windows only)"
+license = "MIT OR Apache-2.0"
+
+[build-dependencies]
+bindgen = "0.68"
