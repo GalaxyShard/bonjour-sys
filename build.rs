@@ -1,13 +1,8 @@
 use std::env;
-use std::fs::File;
 use std::path::PathBuf;
 
 fn main() {
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap()).join("bindings.rs");
-    if cfg!(not(any(windows, target_vendor = "apple"))) {
-        File::create(out_path).expect("Couldn't create placeholder bindings");
-        return;
-    }
     println!("cargo:rerun-if-changed=wrapper.h");
 
     bindgen::Builder::default()

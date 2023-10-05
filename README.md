@@ -1,1 +1,1 @@
-Raw system bindings to Bonjour (Apple & Windows only)
+Raw system bindings to Bonjour (Apple & Windows)
